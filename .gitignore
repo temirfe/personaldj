@@ -6,13 +6,17 @@ __pycache__
 db.sqlite3
 media
 static
+templates/robots.txt
+node_modules/
 
 # Virtual Environment #
 venv/
 env/
 .env
 .myvenv
+.venv
 
 # IDE #
 .vscode/
 .idea/
+.DS_Store

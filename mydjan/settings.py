@@ -27,13 +27,14 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.temir.me', '165.22.77.139','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.temir.me', '165.22.77.139','localhost','127.0.0.1','api.paymentsgateway.averspay.kg']
 CSRF_TRUSTED_ORIGINS = [
     'https://temir.me',
     'http://temir.me',
     'https://165.22.77.139',
     'http://165.22.77.139',
-    'http://127.0.0.1'
+    'http://127.0.0.1',
+    'http://api.paymentsgateway.averspay.kg'
 ]
 
 
@@ -46,7 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'page'
+    'rest_framework',
+    'page',
+    'quote'
 ]
 
 MIDDLEWARE = [
@@ -130,6 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -137,6 +143,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = BASE_DIR / 'static_production'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
