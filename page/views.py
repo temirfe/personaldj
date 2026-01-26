@@ -6,8 +6,8 @@ from django.template import loader
 def index(request):
     """ template = loader.get_template("page/home.html")
     context = {
-        "yoba": 'nahoi',
+        "yoba": '',
     }
     return HttpResponse(template.render(context, request)) """
-    context = {"yoba": "nahoi"}
+    context = {"yoba": ""}
     return render(request, "page/home.html", context)

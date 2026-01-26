@@ -27,10 +27,10 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.temir.space', '165.22.77.139','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.temir.me', '165.22.77.139','localhost','127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [
-    'https://temir.space',
-    'http://temir.space',
+    'https://temir.me',
+    'http://temir.me',
     'https://165.22.77.139',
     'http://165.22.77.139',
     'http://127.0.0.1'
